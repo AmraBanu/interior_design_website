@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (width && height) {
             canvas.style.width = width + "px";
             canvas.style.height = height + "px";
-            document.getElementById("room-preview").innerText = Room: ${width}cm x ${height}cm;
+            document.getElementById("room-preview").innerText = `Room: ${width}cm x ${height}cm`;
         } else {
             alert("Enter valid room dimensions.");
         }
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         item.style.width = width + "px";
         item.style.height = height + "px";
         item.style.background = "#666"; // Darker grey for better visibility
-        item.innerHTML = <div>${name}<br><span>${width}cm × ${height}cm</span></div>; // Show name + dimensions
+        item.innerHTML = `<div>${name}<br><span>${width}cm × ${height}cm</span></div>`; // Show name + dimensions
 
         item.style.position = "absolute";
         item.style.left = Math.random() * (canvas.clientWidth - width) + "px";
