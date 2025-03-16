@@ -1,0 +1,137 @@
+body {
+    font-family: "Playfair Display", "Poppins";
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    text-align: center;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#room-setup, #design-area {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    margin: 5px;
+    width: 150px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 8px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Special Button Styling */
+.action-btn {
+    background-color: #17a2b8;
+}
+
+.action-btn:hover {
+    background-color: #138496;
+}
+
+.danger-btn {
+    background-color: #dc3545;
+}
+
+.danger-btn:hover {
+    background-color: #c82333;
+}
+
+#room-canvas {
+    width: 80%;
+    height: 400px;
+    margin: 20px auto;
+    background: #e9ecef;
+    position: relative;
+    border: 3px solid #007bff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
+    background-image: linear-gradient(#dcdcdc 1px, transparent 1px),
+                      linear-gradient(to right, #dcdcdc 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* 🔹 Furniture Styling */
+.furniture {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background: #666; /* Slightly darker */
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 3px; /* Less rounded corners */
+    overflow: hidden;
+}
+
+/* Show dimensions inside the furniture box */
+.furniture span {
+    font-size: 12px;
+    margin-top: 2px;
+    color: #ddd; /* Lighter for contrast */
+}
+
+/* Highlight selected furniture */
+.furniture.selected {
+    border: 2px solid red;
+}
+
+.furniture:hover {
+    transform: scale(1.05);
+}
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between inputs */
+    flex-wrap: wrap; /* Wrap if the screen is small */
+    justify-content: center;
+}
+
+.input-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between label text and input */
+}

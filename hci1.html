@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Interior Design Tool</title>
+    <link rel="stylesheet" href="HCI1.css">
+</head>
+<body>
+    <header>Virtual Interior Design Tool</header>
+
+    <div id="room-setup">
+        <h2>Room Setup</h2>
+        <label>Room Width (cm): <input type="number" id="room-width" placeholder="Width"></label>
+        <label>Room Length (cm): <input type="number" id="room-height" placeholder="Length"></label>
+        <button onclick="setRoomSize()">Set Room Size</button>
+        <p id="room-preview"></p>
+    </div>
+
+    <div id="design-area">
+        <h2>Design Your Room</h2>
+        <div class="input-group">
+            <label>Furniture Name: <input type="text" id="furniture-name" placeholder="Name"></label>
+            <label>Width (cm): <input type="number" id="furniture-width" placeholder="Width"></label>
+            <label>Length (cm): <input type="number" id="furniture-height" placeholder="Length"></label>
+        </div>
+        <button onclick="addCustomFurniture()">Add Furniture</button>
+        <button class="action-btn" onclick="undoAction()">Undo</button>
+        <button class="action-btn" onclick="redoAction()">Redo</button>
+        <button class="danger-btn" onclick="deleteSelectedFurniture()">Delete Selected</button>
+    </div>
+    
+
+    <div id="room-canvas"></div>
+
+    <script src="HCI1.js"></script>
+</body>
+</html>
